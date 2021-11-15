@@ -14,6 +14,10 @@ import pandas as pd
 
 from sacred.observers import MongoObserver
 import numpy as np
+import random
+import torch
+import gym
+from tqdm import tqdm
 
 # SETTINGS.CAPTURE_MODE = "fd"
 # go to parent dir
@@ -32,6 +36,7 @@ else:
 
 
 from dqn_sacred.runners import main_runner
+from dqn_sacred.dqn import DQN_Agent
 
 ex = Experiment("DQN")
 # all_ex = Experiment("MADDPG l2t Full")
