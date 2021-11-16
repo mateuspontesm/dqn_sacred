@@ -32,13 +32,13 @@ else:
     SETTINGS["CAPTURE_MODE"] = "sys"
     # IP to connect locally. Use "172.25.70.141" if connecting from server
     host = "172.25.70.141"
-    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+    # os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 
 from dqn_sacred.runners import main_runner
 from dqn_sacred.dqn import DQN_Agent
 
-ex = Experiment("DQN")
+ex = Experiment("DQN_GPU")
 # all_ex = Experiment("MADDPG l2t Full")
 # My local DB:
 # host = "127.0.0.1"

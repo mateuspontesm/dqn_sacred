@@ -43,7 +43,7 @@ class DQN_Agent(object):
     def get_action(self, state, eps=0.1):
         with torch.no_grad():
             state = torch.from_numpy(state).float().to(DEVICE)
-            q_values = self.q_net(state).numpy()
+            q_values = self.q_net(state).cpu().numpy()
         if np.random.rand() >= eps:
             action = np.argmax(q_values)
         else:
